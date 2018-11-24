@@ -12,7 +12,7 @@ class Application
       resp.write "@@items = #{@@items}"
       @@items.each do |item|
         resp.write "within loop\n"
-        if item.name.downcase == search_term
+        if item.name == search_term
           resp.write "item name: #{item.name}\n"
           result = item.price
         end
