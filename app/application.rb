@@ -9,7 +9,7 @@ class Application
       search_term = req.path.split("/").last
       result = ""
       resp.write "search term is: #{search_term}\n"
-      resp.write "@@items = #{:@@items}"
+      resp.write "@@items = #{@@items}"
       @@items.each do |item|
         resp.write "within loop\n"
         if item.name.downcase == search_term
