@@ -10,6 +10,7 @@ class Application
       result = ""
       resp.write "search term is: #{search_term}\n"
       resp.write "@@items = #{@@items}"
+      resp.write "@@item = #{@@item}"
       @@items.each do |item|
         resp.write "within loop\n"
         if item.name.downcase == search_term
